@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicóloga Jéssica Alves | Terapia Cognitivo-Comportamental</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: playfair display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Folha de estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body text-body">
+
+    <!-- HEADER / NAVEGAÇÃO (Atualizado) -->
+    <nav id="main-header" class="fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300">
+        <div class="container mx-auto max-w-6xl">
+            <div class="relative flex h-16 items-center justify-between">
+
+                <!-- LOGO (Left side) -->
+                <div class="flex items-center">
+                    <a href="#">
+                        <img class="h-12 w-auto" src="assets/Logotipo monograma (5).svg" alt="Logo Jéssica Alves">
+                    </a>
+                </div>
+
+                <!-- LINKS (Center, hidden on mobile) -->
+                <div
+                    class="hidden md:flex absolute inset-y-0 left-0 w-full justify-center items-center pointer-events-none">
+                    <div class="flex items-center gap-6 text-sm font-medium pointer-events-auto">
+                        <a href="#beneficios" class="nav-link">Benefícios</a>
+                        <a href="#sobre" class="nav-link">Sobre Mim</a>
+                        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE ITEMS -->
+                <div class="flex items-center">
+                    <!-- CTA Button (Desktop) -->
+                    <a href="#cta"
+                        class="hidden md:inline-block bg-cta-main text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-opacity-90 hover:scale-105 transform transition-all duration-300">
+                        Agendar Conversa
+                    </a>
+
+                    <!-- Mobile menu button -->
+                    <div class="flex items-center md:hidden">
+                        <button type="button" command="--toggle" commandfor="mobile-menu"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-body hover:bg-black/5 focus:outline-none">
+                            <span class="sr-only">Abrir menu principal</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                aria-hidden="true" class="size-6 [[aria-expanded='true']_&]:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                aria-hidden="true" class="size-6 [&:not([aria-expanded='true']_*)]:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <el-disclosure id="mobile-menu" hidden
+            class="md:hidden [&:not([hidden])]:block transition-all duration-300 ease-in-out data-[closed]:-translate-y-4 data-[closed]:opacity-0">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <a href="#beneficios"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Benefícios</a>
+                <a href="#sobre"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Sobre Mim</a>
+                <a href="#depoimentos"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Depoimentos</a>
+                <a href="#cta"
+                    class="mt-4 block text-center bg-cta-main text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg">
+                    Agendar Conversa
+                </a>
+            </div>
+        </el-disclosure>
+    </nav>
+
+
+
+    <!-- SEÇÃO 1: HERO (HEADLINE E SUBHEADLINE) -->
+    <section class="min-h-screen relative flex items-center justify-center text-center text-white p-6"
+        style="background-image: url('assets/CANTINHO_ACONCHEGANTE.jpeg'); background-size: cover; background-position: center;">
+        <!-- Overlay para melhorar a legibilidade do texto -->
+        <div class="absolute inset-0 bg-overlay opacity-60"></div>
+
+        <div class="relative z-10 max-w-3xl" data-aos="fade-in" data-aos-duration="1200">
+            <div class="flex justify-center items-center mb-4">
+                <object data="assets/Logotipo monograma (2).svg" height="75px"></object>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+                Sente que seus pensamentos e emoções controlam você?
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-white mb-6 font-secondary">
+                É hora de retomar o leme da sua vida.
+            </h2>
+            <a href="#cta"
+                class="bg-cta-hero text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300 text-lg ">
+                Comece sua Jornada Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: APRESENTAÇÃO DO PROBLEMA E SOLUÇÃO -->
+    <section class="min-h-screen flex items-center justify-center bg-light p-6">
+        <div class="text-center max-w-3xl" data-aos="fade-up">
+            <h3 class="text-3xl md:text-4xl font-bold text-body mb-6">Você não precisa passar por isso sozinho(a).</h3>
+            <div class="text-lg text-secondary space-y-6">
+                <p>
+                    Eu sei como é. A sensação de lutar diariamente contra a própria mente. As mudanças de humor que
+                    afastam as pessoas que você ama. A ansiedade que paralisa e o desânimo que tira a cor do mundo.
+                    Esses não são sinais de fraqueza, mas um chamado para encontrar um novo caminho.
+                </p>
+                <p class="font-semibold text-dark-base">
+                    Através de um atendimento clínico especializado em Terapia Cognitivo-Comportamental (TCC), vamos
+                    trabalhar juntos para identificar, desenvolver e construir uma vida mais equilibrada, consciente e
+                    com mais significado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: BENEFÍCIOS -->
+    <section class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16" id="beneficios">
+        <div class="container max-w-5xl">
+            <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-12" data-aos="fade-up">O que você vai
+                conquistar com este processo terapêutico:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Benefício 1: Clareza e Controle -->
+                <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-bold text-xl text-dark-base mb-2">✅ Clareza e Controle</h4>
+                    <p class="text-secondary">Entenda a raiz dos seus pensamentos, aprendendo a identificar e modificar
+                        os padrões que te sabotam antes que eles dominem seu dia.</p>
+                </div>
+                <!-- Benefício 2: Ferramentas Práticas -->
+                <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-bold text-xl text-dark-base mb-2">🧠 Ferramentas para a Vida Real</h4>
+                    <p class="text-secondary">Receba técnicas práticas para gerenciar crises de ansiedade, combater o
+                        desânimo e regular suas emoções de forma eficaz.</p>
+                </div>
+                <!-- Benefício 3: Relacionamentos Saudáveis -->
+                <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-bold text-xl text-dark-base mb-2">🤝 Relacionamentos Mais Saudáveis</h4>
+                    <p class="text-secondary">Desenvolva habilidades de comunicação e inteligência emocional para
+                        construir conexões mais fortes e significativas.</p>
+                </div>
+                <!-- Benefício 4: Espaço Seguro -->
+                <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-bold text-xl text-dark-base mb-2">❤️ Um Espaço Seguro para Ser Você</h4>
+                    <p class="text-secondary">Encontre um ambiente de acolhimento total, livre de julgamentos, onde você
+                        pode explorar suas vulnerabilidades e redescobrir sua força interior.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: SOBRE MIM -->
+    <section class="min-h-screen flex items-center justify-center bg-light p-6" id="sobre">
+        <div class="container max-w-5xl" data-aos="fade-up">
+            <div
+                class="flex flex-col md:flex-row items-center bg-dark-accent p-8 md:p-12 rounded-lg shadow-lg gap-8 md:gap-12">
+                <!-- Imagem -->
+                <div class="w-48 h-48 md:w-56 md:h-56 flex-shrink-0">
+                    <img src="assets/perfil.webp" alt="Foto da psicóloga Jéssica Alves"
+                        class="rounded-full w-full h-full object-cover border-4 border-light shadow-md">
+                </div>
+                <!-- Texto -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold text-body mb-4">Conheça a sua terapeuta</h3>
+                    <p class="text-lg text-bio mb-6">
+                        Olá! Sou Jéssica Alves, psicóloga apaixonada por guiar pessoas em suas jornadas de
+                        autoconhecimento e cura. Minha missão é oferecer um espaço seguro e ferramentas eficazes para
+                        que você possa não apenas superar desafios, mas também construir uma vida com mais propósito e
+                        bem-estar.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+                        <div class="bg-light p-4 rounded-lg flex-1 shadow">
+                            <p class="text-2xl font-bold text-cta-main">2</p>
+                            <p class="text-secondary font-semibold">Anos de Experiência</p>
+                        </div>
+                        <div class="bg-light p-4 rounded-lg flex-1 shadow">
+                            <p class="text-2xl font-bold text-cta-main">75+</p>
+                            <p class="text-secondary font-semibold">Pacientes Atendidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: PROVA SOCIAL -->
+    <section class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16" id="depoimentos">
+        <div class="container max-w-4xl" data-aos="fade-up">
+            <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-8">A ciência por trás da sua
+                transformação</h3>
+            <p class="text-center max-w-3xl mx-auto text-secondary text-lg mb-10">
+                A Terapia Cognitivo-Comportamental é uma das abordagens mais estudadas e recomendadas, com eficácia
+                comprovada para o tratamento da ansiedade, depressão e dezenas de outros desafios emocionais.
+            </p>
+            <div class="space-y-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-light p-6 rounded-lg text-center shadow" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-secondary italic">"Eu vivia em um estado de alerta constante. A terapia me deu as
+                        ferramentas para entender meus gatilhos e, o mais importante, para agir sobre eles. Foi
+                        libertador."</p>
+                    <p class="font-bold text-dark-base mt-4">— M. S., Paciente</p>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-light p-6 rounded-lg text-center shadow" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-secondary italic">"A TCC me ajudou a reconstruir minha autoestima e a forma como me
+                        comunico. É um trabalho diário, mas agora eu tenho um mapa."</p>
+                    <p class="font-bold text-dark-base mt-4">— J. P., Paciente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: CTA FINAL -->
+    <section id="cta" class="min-h-screen flex items-center justify-center bg-light p-6">
+        <div class="text-center bg-white/50 p-8 md:p-12 rounded-lg shadow-xl max-w-3xl" data-aos="zoom-in">
+            <h3 class="text-2xl md:text-3xl font-bold text-dark-base mb-3">Sua jornada de transformação começa com um
+                primeiro passo.</h3>
+            <p class="text-lg text-secondary mb-6">Agende uma primeira conversa de 15 minutos, totalmente gratuita e sem
+                compromisso, para nos conhecermos e entendermos se a TCC é o caminho certo para você.</p>
+
+            <a href="#"
+                class="inline-block bg-cta-main text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300 text-xl mb-4">
+                Quero Agendar Minha Conversa Gratuita
+            </a>
+
+            <p class="text-cta-main font-semibold">
+                Vagas para novos pacientes são limitadas. Não adie o cuidado que você merece.
+            </p>
+            <p class="text-sm text-secondary mt-2">
+                Sessão 100% online, sigilosa e sem compromisso.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-footer text-light py-8">
+        <div class="container mx-auto max-w-5xl px-6 text-center">
+            <h4 class="text-xl font-bold">Jéssica Alves</h4>
+            <p>Psicóloga | CRP 13/11854</p>
+
+            <!-- Redes Sociais -->
+            <div class="flex justify-center gap-6 mt-4">
+                <!-- Instagram -->
+                <a href="#" target="_blank" class="hover:opacity-80 transition-opacity duration-300 text-white">
+                    <object data="assets/instagram.svg" width="24px" height="24px"></object>
+                </a>
+
+                <!-- curriculo lattes -->
+                <a href="#" target="_blank" class="hover:opacity-80 transition-opacity duration-300">
+                    <u>
+                        <p>Currículo Lattes</p>
+                    </u>
+                </a>
+            </div>
+
+            <p class="text-sm mt-6 opacity-80">&copy; 2025. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Duração da animação em ms
+            once: true, // A animação acontece apenas uma vez
+            offset: 100, // Inicia a animação um pouco antes do elemento aparecer na tela
+        });
+    </script>
+</body>
+
+</html>
