@@ -28,14 +28,14 @@
 
 <body class="bg-body text-body">
 
-    <!-- HEADER / NAVEGAÇÃO (Atualizado) -->
+    <!-- HEADER / NAVEGAÇÃO (Atualizado e Corrigido) -->
     <nav id="main-header" class="fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300">
         <div class="container mx-auto max-w-6xl">
             <div class="relative flex h-16 items-center justify-between">
 
                 <!-- LOGO (Left side) -->
                 <div class="flex items-center">
-                    <a href="#">
+                    <a href="#inicio">
                         <img class="h-12 w-auto" src="assets/Logotipo monograma (5).svg" alt="Logo Jéssica Alves">
                     </a>
                 </div>
@@ -79,16 +79,15 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Container -->
-        <el-disclosure id="mobile-menu" hidden
-            class="md:hidden [&:not([hidden])]:block transition-all duration-300 ease-in-out data-[closed]:-translate-y-4 data-[closed]:opacity-0">
+        <!-- Mobile Menu Container (Corrigido) -->
+        <el-disclosure id="mobile-menu" hidden class="md:hidden origin-top [&:not([hidden])]:block transition-all duration-300 ease-in-out data-[closed]:scale-95 data-[closed]:opacity-0">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <a href="#beneficios"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Benefícios</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Benefícios</a>
                 <a href="#sobre"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Sobre Mim</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Sobre Mim</a>
                 <a href="#depoimentos"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5">Depoimentos</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Depoimentos</a>
                 <a href="#cta"
                     class="mt-4 block text-center bg-cta-main text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg">
                     Agendar Conversa
@@ -97,10 +96,8 @@
         </el-disclosure>
     </nav>
 
-
-
     <!-- SEÇÃO 1: HERO (HEADLINE E SUBHEADLINE) -->
-    <section class="min-h-screen relative flex items-center justify-center text-center text-white p-6"
+    <section id="inicio" class="min-h-screen relative flex items-center justify-center text-center text-white p-6"
         style="background-image: url('assets/CANTINHO_ACONCHEGANTE.jpeg'); background-size: cover; background-position: center;">
         <!-- Overlay para melhorar a legibilidade do texto -->
         <div class="absolute inset-0 bg-overlay opacity-60"></div>
@@ -142,7 +139,7 @@
     </section>
 
     <!-- SEÇÃO 3: BENEFÍCIOS -->
-    <section class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16" id="beneficios">
+    <section id="beneficios" class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16">
         <div class="container max-w-5xl">
             <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-12" data-aos="fade-up">O que você vai
                 conquistar com este processo terapêutico:</h3>
@@ -178,7 +175,7 @@
     </section>
 
     <!-- NOVA SEÇÃO: SOBRE MIM -->
-    <section class="min-h-screen flex items-center justify-center bg-light p-6" id="sobre">
+    <section id="sobre" class="min-h-screen flex items-center justify-center bg-light p-6">
         <div class="container max-w-5xl" data-aos="fade-up">
             <div
                 class="flex flex-col md:flex-row items-center bg-dark-accent p-8 md:p-12 rounded-lg shadow-lg gap-8 md:gap-12">
@@ -212,7 +209,7 @@
     </section>
 
     <!-- SEÇÃO 4: PROVA SOCIAL -->
-    <section class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16" id="depoimentos">
+    <section id="depoimentos" class="min-h-screen flex items-center justify-center bg-dark-accent p-6 py-16">
         <div class="container max-w-4xl" data-aos="fade-up">
             <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-8">A ciência por trás da sua
                 transformação</h3>
@@ -286,16 +283,54 @@
         </div>
     </footer>
 
-    <!-- AOS Animation Library JS -->
+    <!-- Bibliotecas JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    
+    <!-- Scripts Customizados -->
     <script>
+        // Inicializa a biblioteca de animação AOS
         AOS.init({
-            duration: 1000, // Duração da animação em ms
-            once: true, // A animação acontece apenas uma vez
-            offset: 100, // Inicia a animação um pouco antes do elemento aparecer na tela
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+
+        // Adiciona funcionalidade à Navbar (fundo dinâmico e link ativo)
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const handleScroll = () => {
+                // Adiciona/remove classe para fundo do header
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Adiciona/remove classe 'active' ao link da seção visível
+                let currentSectionId = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= sectionTop - 150) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll);
         });
     </script>
 </body>
 
 </html>
+

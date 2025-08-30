@@ -19,7 +19,7 @@
     --color-text-dark-base: #2F2E2C;
     --color-text-secondary: #5B5545;
     --color-text-bio: #35261b;
-    
+
     /* Cores de Ação (CTAs) */
     --color-cta-hero: #7b99b5;
     --color-cta-main: #875F45;
@@ -46,9 +46,10 @@ body {
 /* Header e Navegação */
 #main-header {
     /* Navbar com fundo desde o início */
-    background-color: rgba(226, 222, 210, 0.9); /* --color-bg-light com transparência */
+    background-color: rgba(226, 222, 210, 0.9);
+    /* --color-bg-light com transparência */
     color: var(--color-text-body);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
 }
 
@@ -82,23 +83,25 @@ body {
 .section-title {
     @apply text-3xl md:text-4xl font-bold mb-6;
 }
+
 .section-title-sm {
     @apply text-2xl md:text-3xl font-bold;
 }
 
 /* Cards */
-.benefit-card, .testimonial-card {
+.benefit-card,
+.testimonial-card {
     background-color: var(--color-bg-light);
     @apply p-6 rounded-lg shadow-md transition-transform duration-300;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial-card {
-     @apply text-center;
+    @apply text-center;
 }
 
 /* Footer */
@@ -114,20 +117,85 @@ body {
 
 /* 4. Classes de Utilitário de Cor
 --------------------------------------------- */
-.bg-body           { background-color: var(--color-bg-body); }
-.bg-light          { background-color: var(--color-bg-light); }
-.bg-dark-accent    { background-color: var(--color-bg-dark-accent); }
-.bg-overlay        { background-color: var(--color-bg-overlay); }
-.bg-footer         { background-color: var(--color-bg-footer); }
-.bg-cta-hero       { background-color: var(--color-cta-hero); }
-.bg-cta-main       { background-color: var(--color-cta-main); }
-.text-body         { color: var(--color-text-body); }
-.text-light        { color: var(--color-text-light); }
-.text-dark-base    { color: var(--color-text-dark-base); }
-.text-secondary    { color: var(--color-text-secondary); }
-.text-bio          { color: var(--color-text-bio); }
-.text-cta-main     { color: var(--color-text-cta-main); }
-.text-dark-accent-color  { color: var(--color-bg-dark-accent); }
-.border-light      { border-color: var(--color-bg-light); }
+.bg-body {
+    background-color: var(--color-bg-body);
+}
 
-.font-secondary{font-family: var(--font-secondary);}
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.bg-dark-accent {
+    background-color: var(--color-bg-dark-accent);
+}
+
+.bg-overlay {
+    background-color: var(--color-bg-overlay);
+}
+
+.bg-footer {
+    background-color: var(--color-bg-footer);
+}
+
+.bg-cta-hero {
+    background-color: var(--color-cta-hero);
+}
+
+.bg-cta-main {
+    background-color: var(--color-cta-main);
+}
+
+.text-body {
+    color: var(--color-text-body);
+}
+
+.text-light {
+    color: var(--color-text-light);
+}
+
+.text-dark-base {
+    color: var(--color-text-dark-base);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-bio {
+    color: var(--color-text-bio);
+}
+
+.text-cta-main {
+    color: var(--color-text-cta-main);
+}
+
+.text-dark-accent-color {
+    color: var(--color-bg-dark-accent);
+}
+
+.border-light {
+    border-color: var(--color-bg-light);
+}
+
+.font-secondary {
+    font-family: var(--font-secondary);
+}
+
+#main-header.scrolled {
+    background-color: rgba(201, 188, 170, 0.85);
+    /* Cor de fundo com transparência */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Suporte para Safari */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+}
+
+.nav-link.active {
+    color: var(--color-cta-main);
+    font-weight: 700;
+}
+
+.font-secondary {
+    font-family: 'Playfair Display', serif;
+}
