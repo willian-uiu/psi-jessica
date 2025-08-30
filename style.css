@@ -28,7 +28,7 @@
     --font-primary: 'playfair Display', sans-serif;
 
     /* Fonte secundária */
-    --font-secondary: 'inter', sans-serif;
+    --font-secondary: 'quicksand', sans-serif;
 
 }
 
@@ -83,7 +83,6 @@ body {
 .section-title {
     @apply text-3xl md:text-4xl font-bold mb-6;
 }
-
 .section-title-sm {
     @apply text-2xl md:text-3xl font-bold;
 }
@@ -194,8 +193,4 @@ body {
 .nav-link.active {
     color: var(--color-cta-main);
     font-weight: 700;
-}
-
-.font-secondary {
-    font-family: 'Playfair Display', serif;
 }

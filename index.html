@@ -9,10 +9,11 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Quicksand -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
     <!-- Google Fonts: playfair display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
                 <!-- LOGO (Left side) -->
                 <div class="flex items-center">
                     <a href="#inicio">
-                        <img class="h-12 w-auto" src="assets/Logotipo monograma (5).svg" alt="Logo Jéssica Alves">
+                        <img class="h-12 w-auto" src="assets/logo_escuro.svg" alt="Logo Jéssica Alves">
                     </a>
                 </div>
 
@@ -80,12 +81,14 @@
         </div>
 
         <!-- Mobile Menu Container (Corrigido) -->
-        <el-disclosure id="mobile-menu" hidden class="md:hidden origin-top [&:not([hidden])]:block transition-all duration-300 ease-in-out data-[closed]:scale-95 data-[closed]:opacity-0">
+        <el-disclosure id="mobile-menu" hidden
+            class="md:hidden origin-top [&:not([hidden])]:block transition-all duration-300 ease-in-out data-[closed]:scale-95 data-[closed]:opacity-0">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <a href="#beneficios"
                     class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Benefícios</a>
                 <a href="#sobre"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Sobre Mim</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Sobre
+                    Mim</a>
                 <a href="#depoimentos"
                     class="block rounded-md px-3 py-2 text-base font-medium text-body hover:bg-black/5 nav-link">Depoimentos</a>
                 <a href="#cta"
@@ -104,7 +107,7 @@
 
         <div class="relative z-10 max-w-3xl" data-aos="fade-in" data-aos-duration="1200">
             <div class="flex justify-center items-center mb-4">
-                <object data="assets/Logotipo monograma (2).svg" height="75px"></object>
+                <object data="assets/logo_branco.svg" height="75px"></object>
             </div>
             <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
                 Sente que seus pensamentos e emoções controlam você?
@@ -123,7 +126,7 @@
     <section class="min-h-screen flex items-center justify-center bg-light p-6">
         <div class="text-center max-w-3xl" data-aos="fade-up">
             <h3 class="text-3xl md:text-4xl font-bold text-body mb-6">Você não precisa passar por isso sozinho(a).</h3>
-            <div class="text-lg text-secondary space-y-6">
+            <div class="text-lg text-secondary space-y-6 font-secondary md:text-2xl">
                 <p>
                     Lutar diariamente contra a própria mente é desafiador. As mudanças
                     de humor que afastam as pessoas que você ama. A ansiedade que paralisa e o
@@ -143,30 +146,42 @@
         <div class="container max-w-5xl">
             <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-12" data-aos="fade-up">O que você vai
                 conquistar com este processo terapêutico:</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Benefício 1: Clareza e Controle -->
                 <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-bold text-xl text-dark-base mb-2">✅ Clareza e equilíbrio</h4>
+                    <h4 class="font-bold text-xl text-dark-base mb-2 flex items-center gap-2">
+                        <img src="assets/balance-5-svgrepo-com.svg" class="w-8 h-8" alt="Ícone de balança">
+                        Clareza e equilíbrio
+                    </h4>
                     <p class="text-secondary">Entenda as origens dos seus pensamentos, aprendendo a identificar e
                         modificar os padrões
                         que te causam sofrimento.</p>
                 </div>
                 <!-- Benefício 2: Ferramentas Práticas -->
                 <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <h4 class="font-bold text-xl text-dark-base mb-2">🧠 Ferramentas para a Vida Real</h4>
+                    <h4 class="font-bold text-xl text-dark-base mb-2 flex items-center gap-2">
+                        <img src="assets/ferramenta.svg" class="w-8 h-8" alt="Ícone de cérebro">
+                        Ferramentas para a Vida Real
+                    </h4>
                     <p class="text-secondary">Aprenda técnicas para gerenciar crises de ansiedade, combater o desânimo,
                         desenvolver assertividade nas relações e
                         regular suas emoções de forma eficaz.</p>
                 </div>
                 <!-- Benefício 3: Relacionamentos Saudáveis -->
                 <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <h4 class="font-bold text-xl text-dark-base mb-2">🤝 Relacionamentos Mais Saudáveis</h4>
+                    <h4 class="font-bold text-xl text-dark-base mb-2 flex items-center gap-2">
+                        <img src="assets/relacionamento.svg" class="w-8 h-8" alt="Ícone de aperto de mão">
+                        Relacionamentos Mais Saudáveis
+                    </h4>
                     <p class="text-secondary">Desenvolva habilidades de comunicação e inteligência emocional para
                         construir conexões mais fortes e significativas.</p>
                 </div>
                 <!-- Benefício 4: Espaço Seguro -->
                 <div class="bg-light p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
-                    <h4 class="font-bold text-xl text-dark-base mb-2">❤️ Um Espaço Seguro para Ser Você</h4>
+                    <h4 class="font-bold text-xl text-dark-base mb-2 flex items-center gap-2">
+                        <img src="assets/espaco_seguro.svg" class="w-8 h-8" alt="Ícone de coração com escudo">
+                        Um Espaço Seguro para Ser Você
+                    </h4>
                     <p class="text-secondary">Encontre um ambiente de acolhimento total, livre de julgamentos, onde você
                         pode explorar suas vulnerabilidades e redescobrir sua força interior.</p>
                 </div>
@@ -186,9 +201,9 @@
                 </div>
                 <!-- Texto -->
                 <div class="text-center md:text-left">
-                    <h3 class="text-2xl md:text-3xl font-bold text-body mb-4">Conheça a sua terapeuta</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold text-body mb-4">Olá! Sou Jéssica Alves!</h3>
                     <p class="text-lg text-bio mb-6">
-                        Olá! Sou Jéssica Alves, psicóloga apaixonada por guiar pessoas em suas
+                        Psicóloga apaixonada por guiar pessoas em suas
                         jornadas de autoconhecimento e desenvolvimento. Minha missão é oferecer um espaço
                         seguro e ferramentas eficazes para que você possa não apenas superar
                         desafios, mas também construir uma vida com mais propósito e bem-estar.
@@ -213,7 +228,7 @@
         <div class="container max-w-4xl" data-aos="fade-up">
             <h3 class="text-center text-3xl md:text-4xl font-bold text-body mb-8">A ciência por trás da sua
                 transformação</h3>
-            <p class="text-center max-w-3xl mx-auto text-secondary text-lg mb-10">
+            <p class="text-center max-w-3xl mx-auto text-secondary text-lg mb-10 font-secondary md:text-2xl">
                 A Terapia Cognitivo-Comportamental é uma das abordagens mais estudadas e
                 recomendadas, com eficácia comprovada cientificamente para o tratamento da ansiedade, depressão
                 e dezenas de outros desafios emocionais.
@@ -241,7 +256,7 @@
         <div class="text-center bg-white/50 p-8 md:p-12 rounded-lg shadow-xl max-w-3xl" data-aos="zoom-in">
             <h3 class="text-2xl md:text-3xl font-bold text-dark-base mb-3">Sua jornada de transformação começa com um
                 primeiro passo.</h3>
-            <p class="text-lg text-secondary mb-6">Agende uma primeira conversa de 15 minutos, totalmente gratuita e sem
+            <p class="text-lg text-secondary mb-6 font-secondary md:text-2xl">Agende uma primeira conversa de 15 minutos, totalmente gratuita e sem
                 compromisso, para nos conhecermos e entendermos se a TCC é o caminho certo para você.</p>
 
             <a href="#"
@@ -286,7 +301,7 @@
     <!-- Bibliotecas JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-    
+
     <!-- Scripts Customizados -->
     <script>
         // Inicializa a biblioteca de animação AOS
@@ -333,4 +348,3 @@
 </body>
 
 </html>
-
